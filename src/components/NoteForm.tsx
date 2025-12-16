@@ -1,12 +1,9 @@
 
 import React, { useState } from 'react';
 
-
 interface NoteFormProps {
-
   onAdd: (text: string) => void; 
 }
-
 
 function NoteForm({ onAdd }: NoteFormProps) {
   const [text, setText] = useState('');
@@ -18,13 +15,13 @@ function NoteForm({ onAdd }: NoteFormProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!text.trim()) { 
+    if (!text.trim()) {
         alert('Note cannot be empty!');
         return;
     }
     
     onAdd(text); 
-    setText(''); 
+    setText('');
   };
 
   return (

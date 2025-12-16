@@ -2,10 +2,9 @@
 import React from 'react';
 import { type Note } from '../types'; 
 
-
 interface NoteListProps {
   notes: Note[]; 
-  onDelete: (id: number) => void; 
+  onDelete: (id: number) => void;
 }
 
 function NoteList({ notes, onDelete }: NoteListProps) {
@@ -18,7 +17,6 @@ function NoteList({ notes, onDelete }: NoteListProps) {
         notes.map((note) => (
           <div key={note.id} className="note-item">
             <p>{note.text}</p>
-            {}
             <button onClick={() => onDelete(note.id)}>Delete</button>
           </div>
         ))
